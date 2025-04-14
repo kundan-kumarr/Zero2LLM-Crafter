@@ -155,3 +155,28 @@ git clone https://github.com/yourusername/LLM-Crafter.git
 cd LLM-Crafter
 pip install -r requirements.txt
 
+
+# LLM-Crafter 🚀
+> Build, Train, Deploy your own LLM Applications from Scratch.
+
+## 🧩 Modules Covered
+| Module | Focus | Tools |
+|--------|--------------------------------|----------------------------------|
+| Basecamp | Environment + FastAPI App | Python, VSCode, FastAPI, Streamlit |
+| NLP Basics | Tokenization + Web Data | Pandas, Sklearn, Huggingface Tokenizers |
+| Hugging Face | Fine-Tuning Models | HF Transformers, PEFT |
+| LLM & Prompting | GPT, LLaMA, Chatbots | Groq, Prompting, LLaMA |
+| RAG | Vector Search | FAISS, QDrant, ChromaDB |
+| Advanced RAG | Fusion, Ranking, Guardrails | DeepEval, Custom Rankers |
+| Multimodal AI | Vision, Audio, Video | Diffusion, LLaVA, GPT-V |
+| Agents | CrewAI, phiData, LangChain | Agents, Multi-Agent Workflows |
+| Deployment | CI/CD | Docker, GitHub Actions |
+
+---
+
+## 🚀 Getting Started
+```bash
+git clone https://github.com/yourusername/LLM-Crafter.git
+cd LLM-Crafter
+pip install -r requirements.txt
+
