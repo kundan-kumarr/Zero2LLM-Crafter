@@ -126,3 +126,32 @@ Each participant will:
 Follow the hashtag **#90DaysLLMs** on [LinkedIn](https://linkedin.com) and [Twitter](https://twitter.com) to see project highlights and learning milestones.
 
 ---
+
+# 🧠 LLM-Crafter: Build Your Own Language Model
+
+Welcome to LLM-Crafter — a step-by-step guide and implementation to build, train, and deploy a Language Model from scratch using PyTorch.
+
+## 🚀 What You’ll Learn
+- How tokenizers work
+- How to prepare custom datasets
+- How to implement GPT-style architectures
+- Training strategies and optimization tricks
+- Evaluating and fine-tuning LLMs
+- Generating text and building inference pipelines
+
+## 📂 Project Structure
+- `01_tokenizer/`: Tokenizer from scratch (BPE or WordPiece)
+- `02_dataset/`: Prepare your text data
+- `03_model/`: GPT-style transformer architecture
+- `04_training/`: Training loop, logging, early stopping
+- `05_evaluation/`: Perplexity, BLEU, accuracy metrics
+- `06_inference/`: Prompt-based inference pipeline
+- `07_experiments/`: Logs and comparisons
+
+## 🛠️ Setup
+
+```bash
+git clone https://github.com/yourusername/LLM-Crafter.git
+cd LLM-Crafter
+pip install -r requirements.txt
+
