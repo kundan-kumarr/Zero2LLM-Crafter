@@ -3,31 +3,41 @@ engine: knitr
 ---
 
 ## Preface {.unnumbered}
+his is a collection of lecture notes and practical guides on **AI Agents**, focusing on **large language models (LLMs), agentic workflows, and tool integration**.  
+The materials consolidate insights from research and practice, covering the design, orchestration, and evaluation of **LLM-powered agents** across different domains.  
 
-This is a collection of lecture notes on **statistical analysis** and the use of the statistical programming language **R**.  
-Many of these lectures are based on course materials taught at **Iowa State University** and have been adapted and expanded by **Kundan Kumar**.
+Each section begins with learning objectives, core concepts, and references, followed by examples and hands-on frameworks.  
+The notes emphasize **AI design patterns**, **retrieval-augmented generation (RAG)**, and **multi-agent systems**, offering both conceptual depth and implementation strategies. They are not intended to replace formal textbooks, but to complement them with **practical, framework-driven guidance** in building **scalable, trustworthy, and adaptive LLM agents**.  
 
-Each lecture begins with learning objectives and required readings, with additional references provided throughout the text.  
-The notes introduce key methods and provide examples, but they are not intended to replace a textbook.
+The intended audience is expected to be familiar with programming and the following **LLM-focused concepts and frameworks**:  
+- **AI/LLM design patterns**, including:  
+  - retrieval-augmented generation (RAG)  
+  - agent orchestration workflows  
+  - memory and context management  
+  - self-reflective and hierarchical agents  
+- Frameworks and libraries:  
+    - LangChain for composable pipelines  
+  - **LangGraph** for graph-based orchestration  
+  - **CrewAI** for multi-agent collaboration  
+  - **MCP (Model Context Protocol)** for interoperability  
+- **Evaluation**: methods, metrics, and benchmarks for LLMs and AI agents  
+- **MultiModal AI**: integrating vision, text, and speech into agentic workflows  
+- **Tool Use & Integration**: connecting APIs, databases, and external environments  
+- **Safety & Alignment**: robustness, trustworthiness, and ethical constraints for agentic systems  
 
-The audience is expected to be familiar with R programming and the following statistical concepts and methods:  
-- probability distributions  
-- sampling inference and hypothesis testing  
-- correlation analysis  
-- regression analysis, including:  
-  - simple and multiple linear regression  
-  - mixed-effects models  
-  - generalized linear models  
-  - generalized additive models  
+---
 
 ## Author {.unnumbered}
 
-**Kundan Kumar**  
-<https://kundan-kumarr.github.io/>
+**Kundan Kumar**  - <https://kundan-kumarr.github.io/>
+
+---
 
 ## Citation {.unnumbered}
 
-Kumar, K. (`r substr(Sys.Date(), 1, 4)`). *Statistical Analysis: Lecture Notes with R*. Edition `r substr(Sys.Date(), 1, 7)`.
+Kumar, K. (`r substr(Sys.Date(), 1, 4)`). *AI Agents: LLMs, Agentic Workflows, and Tool Use*. Edition `r substr(Sys.Date(), 1, 7)`.
+
+---
 
 ## License {.unnumbered}
 
