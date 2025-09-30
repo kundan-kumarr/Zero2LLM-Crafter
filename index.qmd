@@ -3,27 +3,28 @@ engine: knitr
 ---
 
 ## Preface {.unnumbered}
-his is a collection of lecture notes and practical guides on **AI Agents**, focusing on **large language models (LLMs), agentic workflows, and tool integration**.  
-The materials consolidate insights from research and practice, covering the design, orchestration, and evaluation of **LLM-powered agents** across different domains.  
+his is a collection of lecture notes and practical guides on AI Agents, focusing on large language models (LLMs), agentic workflows, and tool integration.  
+The materials consolidate insights from research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across different domains.  
 
 Each section begins with learning objectives, core concepts, and references, followed by examples and hands-on frameworks.  
-The notes emphasize **AI design patterns**, **retrieval-augmented generation (RAG)**, and **multi-agent systems**, offering both conceptual depth and implementation strategies. They are not intended to replace formal textbooks, but to complement them with **practical, framework-driven guidance** in building **scalable, trustworthy, and adaptive LLM agents**.  
+The notes emphasize AI design patterns, retrieval-augmented generation (RAG), and multi-agent systems, offering both conceptual depth and implementation strategies. They are not intended to replace formal textbooks, but to complement them with practical, framework-driven guidance in building scalable, trustworthy, and adaptive LLM agents.  
 
-The intended audience is expected to be familiar with programming and the following **LLM-focused concepts and frameworks**:  
-- **AI/LLM design patterns**, including:  
+The intended audience is expected to be familiar with programming and the following LLM-focused concepts and frameworks:  
+
+- AI/LLM design patterns, including:  
   - retrieval-augmented generation (RAG)  
   - agent orchestration workflows  
   - memory and context management  
   - self-reflective and hierarchical agents  
 - Frameworks and libraries:  
     - LangChain for composable pipelines  
-  - **LangGraph** for graph-based orchestration  
-  - **CrewAI** for multi-agent collaboration  
-  - **MCP (Model Context Protocol)** for interoperability  
-- **Evaluation**: methods, metrics, and benchmarks for LLMs and AI agents  
-- **MultiModal AI**: integrating vision, text, and speech into agentic workflows  
-- **Tool Use & Integration**: connecting APIs, databases, and external environments  
-- **Safety & Alignment**: robustness, trustworthiness, and ethical constraints for agentic systems  
+    - LangGraph** for graph-based orchestration  
+    - CrewAI for multi-agent collaboration  
+    - MCP (Model Context Protocol) for interoperability  
+- Evaluation: methods, metrics, and benchmarks for LLMs and AI agents  
+- MultiModal AI: integrating vision, text, and speech into agentic workflows  
+- Tool Use & Integration: connecting APIs, databases, and external environments  
+- Safety & Alignment: robustness, trustworthiness, and ethical constraints for agentic systems  
 
 ---
 
