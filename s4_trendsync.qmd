@@ -12,7 +12,7 @@ options(digits = 3)
 theme_set(theme_light())
 ```
 
-# Synchrony of parametric trends {#sec-syncparam}
+# Implementation Templates {#sec-syncparam}
 
 The problem of detecting joint trend dynamics in time series is essential in a variety of applications, ranging from the analysis of macroeconomic indicators [@Vogelsang:Franses:2005;@Eun:Lee:2010] to assessing patterns in ice phenology measurements from multiple locations [@Latifovic:Pouliot:2007;@Duguay:etal:2013] to evaluating yields of financial instruments at various maturity levels [@Park:etal:2009] and cell phone download activity at different area codes [@Degras:etal:2012].
 

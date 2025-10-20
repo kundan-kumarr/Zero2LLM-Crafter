@@ -3,29 +3,44 @@ engine: knitr
 ---
 
 ## Preface {.unnumbered}
-his is a collection of lecture notes and practical guides on AI Agents, focusing on large language models (LLMs), agentic workflows, and tool integration.  
-The materials consolidate insights from research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across different domains.  
+This collection of lecture notes and practical guides focuses on AI Agents, emphasizing `Large Language Models (LLMs)`, `LLM Reasoning`, `agentic workflows`, and tool integration, including the development of `reasoning-centric LLMs from scratch`.
+The materials consolidate insights from both research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across diverse domains.
+Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks.
+The notes emphasize `AI design patterns`, `LLM reasoning strategies`, R`etrieval-Augmented Generation (RAG)`, and `multi-agent systems`, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks but to complement them through practical, framework-driven insights for building `scalable, trustworthy, and adaptive LLM agents`.
+The intended audience is expected to have a foundational understanding of programming and familiarity with the following LLM-related concepts and frameworks:
 
-Each section begins with learning objectives, core concepts, and references, followed by examples and hands-on frameworks.  
-The notes emphasize AI design patterns, retrieval-augmented generation (RAG), and multi-agent systems, offering both conceptual depth and implementation strategies. They are not intended to replace formal textbooks, but to complement them with practical, framework-driven guidance in building scalable, trustworthy, and adaptive LLM agents.  
-
-The intended audience is expected to be familiar with programming and the following LLM-focused concepts and frameworks:  
-
-- AI/LLM design patterns, including:  
-  - retrieval-augmented generation (RAG)  
-  - agent orchestration workflows  
-  - memory and context management  
-  - self-reflective and hierarchical agents  
+- AI/LLM design patterns, including:
+  - LLM Reasoning and Chain-of-Thought (CoT) prompting
+  - Tree-of-Thought (ToT), Graph-of-Thought (GoT), and Reflection-based reasoning
+  - Retrieval-Augmented Generation (RAG)  
+  - Agent orchestration workflows and planner–executor design 
+  - Memory and context management (short-term, episodic, and long-term)
+  - Self-reflective, hierarchical, and multi-agent collaboration patterns
+  
 - Frameworks and libraries:  
-    - LangChain for composable pipelines  
-    - LangGraph** for graph-based orchestration  
-    - CrewAI for multi-agent collaboration  
-    - MCP (Model Context Protocol) for interoperability  
-- Evaluation: methods, metrics, and benchmarks for LLMs and AI agents  
-- MultiModal AI: integrating vision, text, and speech into agentic workflows  
-- Tool Use & Integration: connecting APIs, databases, and external environments  
-- Safety & Alignment: robustness, trustworthiness, and ethical constraints for agentic systems  
-
+    - LangChain : Composable pipelines for tool-augmented reasoning
+    - LangGraph : Graph-based agent orchestration and reasoning flow control 
+    - CrewAI    : Collaborative and role-based multi-agent coordination 
+    - MCP (Model Context Protocol) : Cross-model interoperability and context exchange
+ 
+- Evaluation and Benchmarking
+    - Methods, metrics, and standardized benchmarks for LLMs and AI agents
+    - Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench
+    - Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment
+- Multimodal and Tool-Integrated AI
+    - Integrating vision, text, and speech into agentic workflows
+    - Connecting APIs, databases, and external environments for tool use
+    - Designing interactive and embodied agents for perception and control
+- Safety, Ethics, and Alignment
+    - Robustness, trustworthiness, and ethical safeguards for agentic systems
+    - Defenses against adversarial inputs, data poisoning, and prompt injection
+    - Responsible deployment and human-in-the-loop design
+- Emerging Frontiers
+    - LLM + DRL: Reinforcement learning agents with reasoning and planning
+    - LLM + GNNs: Structured and relational reasoning for decision systems
+    - *LLM Compilers and World Models: Translating reasoning into executable plans*
+    - *AI Operating Systems: Multi-agent ecosystems and autonomous orchestration*
+ 
 ---
 
 ## Author {.unnumbered}

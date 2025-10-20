@@ -12,6 +12,6 @@ options(digits = 3)
 theme_set(theme_light())
 ```
 
-# Analysis of precipitation extremes and climate projections {#sec-extremes}
+# Memory and Knowledge Base Schemas {#sec-extremes}
 
 Text

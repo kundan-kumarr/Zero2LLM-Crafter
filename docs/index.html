@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l02_tsintro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Time Series Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Retrieval-augmented generation (RAG)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -306,48 +306,61 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 <section id="preface" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="preface">Preface</h2><p><img src="TSAcov.png" title="AI Agents" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>his is a collection of lecture notes and practical guides on AI Agents, focusing on large language models (LLMs), agentic workflows, and tool integration.<br>
-The materials consolidate insights from research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across different domains.</p>
-<p>Each section begins with learning objectives, core concepts, and references, followed by examples and hands-on frameworks.<br>
-The notes emphasize AI design patterns, retrieval-augmented generation (RAG), and multi-agent systems, offering both conceptual depth and implementation strategies. They are not intended to replace formal textbooks, but to complement them with practical, framework-driven guidance in building scalable, trustworthy, and adaptive LLM agents.</p>
-<p>The intended audience is expected to be familiar with programming and the following LLM-focused concepts and frameworks:</p>
+<p>This collection of lecture notes and practical guides focuses on AI Agents, emphasizing <code>Large Language Models (LLMs)</code>, <code>LLM Reasoning</code>, <code>agentic workflows</code>, and tool integration, including the development of <code>reasoning-centric LLMs from scratch</code>. The materials consolidate insights from both research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across diverse domains. Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks. The notes emphasize <code>AI design patterns</code>, <code>LLM reasoning strategies</code>, R<code>etrieval-Augmented Generation (RAG)</code>, and <code>multi-agent systems</code>, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks but to complement them through practical, framework-driven insights for building <code>scalable, trustworthy, and adaptive LLM agents</code>. The intended audience is expected to have a foundational understanding of programming and familiarity with the following LLM-related concepts and frameworks:</p>
 <ul>
 <li>AI/LLM design patterns, including:
 <ul>
-<li>retrieval-augmented generation (RAG)<br>
+<li>LLM Reasoning and Chain-of-Thought (CoT) prompting</li>
+<li>Tree-of-Thought (ToT), Graph-of-Thought (GoT), and Reflection-based reasoning</li>
+<li>Retrieval-Augmented Generation (RAG)<br>
 </li>
-<li>agent orchestration workflows<br>
-</li>
-<li>memory and context management<br>
-</li>
-<li>self-reflective and hierarchical agents<br>
-</li>
+<li>Agent orchestration workflows and planner–executor design</li>
+<li>Memory and context management (short-term, episodic, and long-term)</li>
+<li>Self-reflective, hierarchical, and multi-agent collaboration patterns</li>
 </ul>
 </li>
 <li>Frameworks and libraries:
 <ul>
-<li>LangChain for composable pipelines<br>
-</li>
-<li>LangGraph** for graph-based orchestration<br>
-</li>
-<li>CrewAI for multi-agent collaboration<br>
-</li>
-<li>MCP (Model Context Protocol) for interoperability<br>
-</li>
+<li>LangChain : Composable pipelines for tool-augmented reasoning</li>
+<li>LangGraph : Graph-based agent orchestration and reasoning flow control</li>
+<li>CrewAI : Collaborative and role-based multi-agent coordination</li>
+<li>MCP (Model Context Protocol) : Cross-model interoperability and context exchange</li>
 </ul>
 </li>
-<li>Evaluation: methods, metrics, and benchmarks for LLMs and AI agents<br>
+<li>Evaluation and Benchmarking
+<ul>
+<li>Methods, metrics, and standardized benchmarks for LLMs and AI agents</li>
+<li>Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench</li>
+<li>Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment</li>
+</ul>
 </li>
-<li>MultiModal AI: integrating vision, text, and speech into agentic workflows<br>
+<li>Multimodal and Tool-Integrated AI
+<ul>
+<li>Integrating vision, text, and speech into agentic workflows</li>
+<li>Connecting APIs, databases, and external environments for tool use</li>
+<li>Designing interactive and embodied agents for perception and control</li>
+</ul>
 </li>
-<li>Tool Use &amp; Integration: connecting APIs, databases, and external environments<br>
+<li>Safety, Ethics, and Alignment
+<ul>
+<li>Robustness, trustworthiness, and ethical safeguards for agentic systems</li>
+<li>Defenses against adversarial inputs, data poisoning, and prompt injection</li>
+<li>Responsible deployment and human-in-the-loop design</li>
+</ul>
 </li>
-<li>Safety &amp; Alignment: robustness, trustworthiness, and ethical constraints for agentic systems</li>
+<li>Emerging Frontiers
+<ul>
+<li>LLM + DRL: Reinforcement learning agents with reasoning and planning</li>
+<li>LLM + GNNs: Structured and relational reasoning for decision systems</li>
+<li><em>LLM Compilers and World Models: Translating reasoning into executable plans</em></li>
+<li><em>AI Operating Systems: Multi-agent ecosystems and autonomous orchestration</em></li>
+</ul>
+</li>
 </ul>
 <hr></section><section id="author" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="author">Author</h2>
 <p><strong>Kundan Kumar</strong> - <a href="https://kundan-kumarr.github.io/" class="uri">https://kundan-kumarr.github.io/</a></p>
 <hr></section><section id="citation" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="citation">Citation</h2>
-<p>Kumar, K. (2025). <em>AI Agents: LLMs, Agentic Workflows, and Tool Use</em>. Edition 2025-09.</p>
+<p>Kumar, K. (2025). <em>AI Agents: LLMs, Agentic Workflows, and Tool Use</em>. Edition 2025-10.</p>
 <hr></section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
 <p>This work is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
 

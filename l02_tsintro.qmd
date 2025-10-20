@@ -12,7 +12,7 @@ options(digits = 3)
 theme_set(theme_light())
 ```
 
-# Retrieval-augmented generation (RAG)
+# Reasoning with Large Language Models
 
 The goal of this lecture is to introduce time series and their common components. 
 You should become confident in identifying and characterizing trends, seasonal and other variability based on visual analysis of time series plots and plots of autocorrelation functions.
@@ -29,7 +29,7 @@ You should become confident in identifying and characterizing trends, seasonal a
 * Chapters 1.1--1.4 in @Brockwell:Davis:2002
 
 
-## Time series and its components
+## LLM Reasoning: Overview and Motivation
 
 'A *time series* is a set of observations $Y_t$, each one being recorded at a specific time $t$' [@Brockwell:Davis:2002]. 
 The index $t$ will typically refer to some standard unit of time, e.g., seconds, hours, days, weeks, months, or years.
@@ -75,7 +75,7 @@ In this course, we will be interested in modeling time series to learn more abou
 Typically, we will use the historical data (or some appropriate subset of it) to build our forecasting models.
 
 
-## Decomposition of time series
+## Chain-of-Thought (CoT) Reasoning
 
 A time series can generally be expressed as a sum or product of four distinct components:
 $$
@@ -117,7 +117,7 @@ ggplot2::autoplot(decompose(births))
 ```
 
 
-## General approach to time series modeling
+## Tree-of-Thought (ToT) and Graph-of-Thought (GoT)
 
 1. Plot the series and examine the main features of the graph, checking whether there is
     * a trend,
@@ -166,7 +166,7 @@ We should create an appropriate univariate model (like in @eq-funiv) to serve as
 
 ::: {.callout-note icon=false}
 
-## Example: Identify the time-series components in these plots
+## Self-Reflection and Verifiable Reasoning
 
 ```{r}
 #| label: fig-sunspots
@@ -224,7 +224,7 @@ forecast::autoplot(as.ts(Ecdat::SP500[,1])) +
 :::
 
 
-## Some simple time series models
+## Reasoning Evaluation and Self-Consistency
 
 Recall that a random process is a sequence of random variables, so its model would be the joint distribution of these random variables
 $$

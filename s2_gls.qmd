@@ -12,7 +12,7 @@ options(digits = 3)
 theme_set(theme_light())
 ```
 
-# Generalized least squares {#sec-gls}
+# Datasets, Benchmarks, and Evaluation Tools {#sec-gls}
 
 Here we use time series data (ordered by $t$), thus, @eq-mod1 will be written with the time indices $t$ as
 $$
