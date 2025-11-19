@@ -3,49 +3,55 @@ engine: knitr
 ---
 
 ## Preface {.unnumbered}
-This collection of lecture notes and practical guides focuses on AI Agents, emphasizing `Large Language Models (LLMs)`, `LLM Reasoning`, `agentic workflows`, and tool integration, including the development of `reasoning-centric LLMs from scratch`.
+
+This collection of lecture notes and practical guides focuses on **AI agents**, with an emphasis on Large Language Models (LLMs), LLM reasoning, agentic workflows, and tool integration, including the development of **reasoning-centric LLMs from scratch**.  
 The materials consolidate insights from both research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across diverse domains.
-Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks.
-The notes emphasize `AI design patterns`, `LLM reasoning strategies`, R`etrieval-Augmented Generation (RAG)`, and `multi-agent systems`, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks but to complement them through practical, framework-driven insights for building `scalable, trustworthy, and adaptive LLM agents`.
+
+Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks.  
+The notes emphasize **AI design patterns**, **LLM reasoning strategies**, **Retrieval-Augmented Generation (RAG)**, and **multi-agent systems**, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks, but to complement them through practical, framework-driven insights for building **scalable, trustworthy, and adaptive LLM agents**.
+
 The intended audience is expected to have a foundational understanding of programming and familiarity with the following LLM-related concepts and frameworks:
 
-- AI/LLM design patterns, including:
-  - LLM Reasoning and Chain-of-Thought (CoT) prompting
-  - Tree-of-Thought (ToT), Graph-of-Thought (GoT), and Reflection-based reasoning
+- **AI / LLM design patterns**, including:
+  - LLM reasoning and Chain-of-Thought (CoT) prompting  
+  - Tree-of-Thought (ToT), Graph-of-Thought (GoT), and reflection-based reasoning  
   - Retrieval-Augmented Generation (RAG)  
-  - Agent orchestration workflows and planner–executor design 
-  - Memory and context management (short-term, episodic, and long-term)
-  - Self-reflective, hierarchical, and multi-agent collaboration patterns
-  
-- Frameworks and libraries:  
-    - LangChain : Composable pipelines for tool-augmented reasoning
-    - LangGraph : Graph-based agent orchestration and reasoning flow control 
-    - CrewAI    : Collaborative and role-based multi-agent coordination 
-    - MCP (Model Context Protocol) : Cross-model interoperability and context exchange
- 
-- Evaluation and Benchmarking
-    - Methods, metrics, and standardized benchmarks for LLMs and AI agents
-    - Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench
-    - Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment
-- Multimodal and Tool-Integrated AI
-    - Integrating vision, text, and speech into agentic workflows
-    - Connecting APIs, databases, and external environments for tool use
-    - Designing interactive and embodied agents for perception and control
-- Safety, Ethics, and Alignment
-    - Robustness, trustworthiness, and ethical safeguards for agentic systems
-    - Defenses against adversarial inputs, data poisoning, and prompt injection
-    - Responsible deployment and human-in-the-loop design
-- Emerging Frontiers
-    - LLM + DRL: Reinforcement learning agents with reasoning and planning
-    - LLM + GNNs: Structured and relational reasoning for decision systems
-    - *LLM Compilers and World Models: Translating reasoning into executable plans*
-    - *AI Operating Systems: Multi-agent ecosystems and autonomous orchestration*
- 
+  - Agent orchestration workflows and planner–executor design  
+  - Memory and context management (short-term, episodic, and long-term)  
+  - Self-reflective, hierarchical, and multi-agent collaboration patterns  
+
+- **Frameworks and libraries**:
+  - LangChain – composable pipelines for tool-augmented reasoning  
+  - LangGraph – graph-based agent orchestration and reasoning flow control  
+  - CrewAI – collaborative and role-based multi-agent coordination  
+  - MCP (Model Context Protocol) – cross-model interoperability and context exchange  
+
+- **Evaluation and benchmarking**
+  - Methods, metrics, and standardized benchmarks for LLMs and AI agents  
+  - Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench  
+  - Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment  
+
+- **Multimodal and tool-integrated AI**
+  - Integrating vision, text, and speech into agentic workflows  
+  - Connecting APIs, databases, and external environments for tool use  
+  - Designing interactive and embodied agents for perception and control  
+
+- **Safety, ethics, and alignment**
+  - Robustness, trustworthiness, and ethical safeguards for agentic systems  
+  - Defenses against adversarial inputs, data poisoning, and prompt injection  
+  - Responsible deployment and human-in-the-loop design  
+
+- **Emerging frontiers**
+  - LLM + DRL: reinforcement learning agents with reasoning and planning  
+  - LLM + GNNs: structured and relational reasoning for decision systems  
+  - LLM compilers and world models: translating reasoning into executable plans  
+  - AI operating systems: multi-agent ecosystems and autonomous orchestration 
+
 ---
 
 ## Author {.unnumbered}
 
-**Kundan Kumar**  - <https://kundan-kumarr.github.io/>
+**Kundan Kumar** — <https://kundan-kumarr.github.io/>
 
 ---
 

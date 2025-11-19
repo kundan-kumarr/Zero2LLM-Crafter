@@ -3,14 +3,14 @@ project:
     output-dir: docs
 
 book:
-    title: AI Agents
-    subtitle: LLMs, Agentic Workflows, and Tool Use
+    title: "AI Agents"
+    subtitle: "LLMs, Agentic Workflows, and Tool Use"
     author: Kundan Kumar
-    # date: today
+    date: today
     date-format: iso
     favicon: favicon.png
     cover-image: TSAcov.png
-    repo-url: https://github.com/kundan-kumarr/StatSphere/
+    repo-url: https://github.com/kundan-kumarr/Zero2LLM-Crafter/
     repo-branch: master
     repo-actions: [edit, issue]
     downloads: [pdf, epub]
@@ -21,27 +21,40 @@ book:
         search: true
     chapters:
         - index.qmd
-        - l01_regression.qmd
-        - l02_tsintro.qmd
-        - l03_smoothing.qmd
-        - l04_arma.qmd
-        - l05_arima.qmd
-        - l06_garch.qmd
-        - l07_trendtest.qmd
-        - l08_tsreg1.qmd
-        - l09_tsreg2.qmd
-        - l10_causality.qmd
-        - l11_panel.qmd
-        - l12_forecast.qmd
-        - l13_spectral.qmd
+        - part: "Part I — Foundations of Agentic AI"
+          chapters:
+            - 01-foundations-agentic-ai.qmd
+            - 02-reasoning-with-llms.qmd
+            - 03-retrieval-augmented-generation.qmd
+        - part: "Part II — Architectures, Patterns, and Memory"
+          chapters:
+            - 04-agent-architectures.qmd
+            - 05-agent-orchestration-patterns.qmd
+            - 06-memory-and-context-management.qmd
+        - part: "Part III — Tools, Frameworks, and Systems"
+          chapters:
+            - 07-tool-integration-and-safety.qmd
+            - 08-frameworks-and-tooling.qmd
+            - 09-multimodal-agents.qmd
+            - 10-multi-agent-systems.qmd
+        - part: "Part IV — Evaluation, Safety, and Optimization"
+          chapters:
+            - 11-evaluation-and-benchmarking.qmd
+            - 12-observability-and-debugging.qmd
+            - 13-safety-ethics-and-alignment.qmd
+            - 14-performance-and-scaling.qmd
+        - part: "Part V — Emerging Frontiers and AI Operating Systems"
+          chapters:
+            - 15-emerging-frontiers.qmd
+            - 16-ai-operating-systems.qmd
         #- software.qmd
         - references.qmd
     appendices:
-        - s1_wls.qmd
-        - s2_gls.qmd
-        - s4_trendsync.qmd
-        - s6_extremes.qmd
-        - s_practice.qmd
+        - appendix-datasets-and-benchmarks.qmd
+        - appendix-implementation-templates.qmd
+        - appendix-memory-and-knowledge-schemas.qmd
+        - appendix-practice-exercises.qmd
+        - appendix-prompt-engineering-patterns.qmd
 
 bibliography:
     - references.bib

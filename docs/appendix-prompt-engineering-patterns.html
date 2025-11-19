@@ -4,9 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Kundan Kumar">
-<meta name="dcterms.date" content="2025-11-19">
-<title>AI Agents</title>
+<title>Software – AI Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,7 +17,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -28,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-foundations-agentic-ai.html" rel="next">
+<link href="./appendix-practice-exercises.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -74,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-datasets-and-benchmarks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-prompt-engineering-patterns.html">Software</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -335,7 +387,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-prompt-engineering-patterns.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-prompt-engineering-patterns.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Software</span></a>
   </div>
 </li>
@@ -345,133 +397,283 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-<li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  <li><a href="#author" id="toc-author" class="nav-link" data-scroll-target="#author">Author</a></li>
-  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">AI Agents</h1>
-<p class="subtitle lead">LLMs, Agentic Workflows, and Tool Use</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-datasets-and-benchmarks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-prompt-engineering-patterns.html">Software</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Software</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kundan Kumar </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2025-11-19</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header>
-<section id="preface" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="preface">Preface</h2><p><img src="TSAcov.png" title="AI Agents" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>This collection of lecture notes and practical guides focuses on <strong>AI agents</strong>, with an emphasis on Large Language Models (LLMs), LLM reasoning, agentic workflows, and tool integration, including the development of <strong>reasoning-centric LLMs from scratch</strong>.<br>
-The materials consolidate insights from both research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across diverse domains.</p>
-<p>Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks.<br>
-The notes emphasize <strong>AI design patterns</strong>, <strong>LLM reasoning strategies</strong>, <strong>Retrieval-Augmented Generation (RAG)</strong>, and <strong>multi-agent systems</strong>, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks, but to complement them through practical, framework-driven insights for building <strong>scalable, trustworthy, and adaptive LLM agents</strong>.</p>
-<p>The intended audience is expected to have a foundational understanding of programming and familiarity with the following LLM-related concepts and frameworks:</p>
+</header><p>Examples were calculated in R version 4.5.1 (2025-06-13) with an effort to use the most recent versions of R packages.</p>
+<p>The codes load silently only a few packages:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>All other packages are named before the function as in <code><a href="https://pkg.robjhyndman.com/forecast/reference/autoplot.acf.html">forecast::ggAcf()</a></code> (this code calls the function <code>ggAcf()</code> from the package <code>forecast</code>) or called immediately before the necessary function use:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://fable.tidyverts.org">fable</a></span><span class="op">)</span></span>
+<span><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tsibble.tidyverts.org/reference/as-tsibble.html">as_tsibble</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://fabletools.tidyverts.org/reference/model.html">model</a></span><span class="op">(</span><span class="fu"><a href="https://fable.tidyverts.org/reference/ARIMA.html">ARIMA</a></span><span class="op">(</span><span class="va">Y</span> <span class="op">~</span> <span class="fl">1</span>, ic <span class="op">=</span> <span class="st">"bic"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://fabletools.tidyverts.org/reference/report.html">report</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The R packages used in this book include (in alphabetic order):</p>
 <ul>
 <li>
-<strong>AI / LLM design patterns</strong>, including:
-<ul>
-<li>LLM reasoning and Chain-of-Thought (CoT) prompting<br>
-</li>
-<li>Tree-of-Thought (ToT), Graph-of-Thought (GoT), and reflection-based reasoning<br>
-</li>
-<li>Retrieval-Augmented Generation (RAG)<br>
-</li>
-<li>Agent orchestration workflows and planner–executor design<br>
-</li>
-<li>Memory and context management (short-term, episodic, and long-term)<br>
-</li>
-<li>Self-reflective, hierarchical, and multi-agent collaboration patterns</li>
-</ul>
+<code>astsa</code> <span class="citation" data-cites="R-astsa">(<a href="references.html#ref-R-astsa" role="doc-biblioref">Stoffer 2025</a>)</span>
 </li>
 <li>
-<strong>Frameworks and libraries</strong>:
-<ul>
-<li>LangChain – composable pipelines for tool-augmented reasoning<br>
-</li>
-<li>LangGraph – graph-based agent orchestration and reasoning flow control<br>
-</li>
-<li>CrewAI – collaborative and role-based multi-agent coordination<br>
-</li>
-<li>MCP (Model Context Protocol) – cross-model interoperability and context exchange</li>
-</ul>
+<code>downlit</code> <span class="citation" data-cites="R-downlit">(<a href="references.html#ref-R-downlit" role="doc-biblioref">Wickham 2024</a>)</span>
 </li>
 <li>
-<strong>Evaluation and benchmarking</strong>
-<ul>
-<li>Methods, metrics, and standardized benchmarks for LLMs and AI agents<br>
-</li>
-<li>Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench<br>
-</li>
-<li>Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment</li>
-</ul>
+<code>dplR</code> <span class="citation" data-cites="R-dplR">(<a href="references.html#ref-R-dplR" role="doc-biblioref">Bunn et al. 2025</a>)</span>
 </li>
 <li>
-<strong>Multimodal and tool-integrated AI</strong>
-<ul>
-<li>Integrating vision, text, and speech into agentic workflows<br>
-</li>
-<li>Connecting APIs, databases, and external environments for tool use<br>
-</li>
-<li>Designing interactive and embodied agents for perception and control</li>
-</ul>
+<code>dplyr</code> <span class="citation" data-cites="R-dplyr">(<a href="references.html#ref-R-dplyr" role="doc-biblioref">Wickham et al. 2023</a>)</span>
 </li>
 <li>
-<strong>Safety, ethics, and alignment</strong>
-<ul>
-<li>Robustness, trustworthiness, and ethical safeguards for agentic systems<br>
-</li>
-<li>Defenses against adversarial inputs, data poisoning, and prompt injection<br>
-</li>
-<li>Responsible deployment and human-in-the-loop design</li>
-</ul>
+<code>dynlm</code> <span class="citation" data-cites="R-dynlm">(<a href="references.html#ref-R-dynlm" role="doc-biblioref">Zeileis 2019</a>)</span>
 </li>
 <li>
-<strong>Emerging frontiers</strong>
-<ul>
-<li>LLM + DRL: reinforcement learning agents with reasoning and planning<br>
+<code>Ecdat</code> <span class="citation" data-cites="R-Ecdat">(<a href="references.html#ref-R-Ecdat" role="doc-biblioref">Croissant and Graves 2025</a>)</span>
 </li>
-<li>LLM + GNNs: structured and relational reasoning for decision systems<br>
+<li>
+<code>fable</code> <span class="citation" data-cites="R-fable">(<a href="references.html#ref-R-fable" role="doc-biblioref">O’Hara-Wild et al. 2024</a>)</span>
 </li>
-<li>LLM compilers and world models: translating reasoning into executable plans<br>
+<li>
+<code>feasts</code> <span class="citation" data-cites="R-feasts">(<a href="references.html#ref-R-feasts" role="doc-biblioref">O’Hara-Wild et al. 2025</a>)</span>
 </li>
-<li>AI operating systems: multi-agent ecosystems and autonomous orchestration</li>
+<li>
+<code>fGarch</code> <span class="citation" data-cites="R-fGarch">(<a href="references.html#ref-R-fGarch" role="doc-biblioref">Wuertz et al. 2024</a>)</span>
+</li>
+<li>
+<code>FinTS</code> <span class="citation" data-cites="R-FinTS">(<a href="references.html#ref-R-FinTS" role="doc-biblioref">Graves 2024</a>)</span>
+</li>
+<li>
+<code>fma</code> <span class="citation" data-cites="R-fma">(<a href="references.html#ref-R-fma" role="doc-biblioref">Hyndman 2023</a>)</span>
+</li>
+<li>
+<code>forecast</code> <span class="citation" data-cites="R-forecast">(<a href="references.html#ref-R-forecast" role="doc-biblioref">Hyndman et al. 2025</a>)</span>
+</li>
+<li>
+<code>funtimes</code> <span class="citation" data-cites="R-funtimes">(<a href="references.html#ref-R-funtimes" role="doc-biblioref">Lyubchich et al. 2023</a>)</span>
+</li>
+<li>
+<code>gamlss</code> <span class="citation" data-cites="R-gamlss">(<a href="references.html#ref-R-gamlss" role="doc-biblioref">Stasinopoulos and Rigby 2025</a>)</span>
+</li>
+<li>
+<code>gamlss.ggplots</code> <span class="citation" data-cites="R-gamlss.ggplots">(<a href="references.html#ref-R-gamlss.ggplots" role="doc-biblioref">Stasinopoulos et al. 2024</a>)</span>
+</li>
+<li>
+<code>gamlss.util</code> <span class="citation" data-cites="R-gamlss.util">(<a href="references.html#ref-R-gamlss.util" role="doc-biblioref">Stasinopoulos et al. 2016</a>)</span>
+</li>
+<li>
+<code>GGally</code> <span class="citation" data-cites="R-GGally">(<a href="references.html#ref-R-GGally" role="doc-biblioref">Schloerke et al. 2025</a>)</span>
+</li>
+<li>
+<code>ggplot2</code> <span class="citation" data-cites="R-ggplot2">(<a href="references.html#ref-R-ggplot2" role="doc-biblioref">Wickham et al. 2025a</a>)</span>
+</li>
+<li>
+<code>ggpubr</code> <span class="citation" data-cites="R-ggpubr">(<a href="references.html#ref-R-ggpubr" role="doc-biblioref">Kassambara 2025</a>)</span>
+</li>
+<li>
+<code>Kendall</code> <span class="citation" data-cites="R-Kendall">(<a href="references.html#ref-R-Kendall" role="doc-biblioref">McLeod 2022</a>)</span>
+</li>
+<li>
+<code>knitr</code> <span class="citation" data-cites="R-knitr">(<a href="references.html#ref-R-knitr" role="doc-biblioref">Xie 2025</a>)</span>
+</li>
+<li>
+<code>lawstat</code> <span class="citation" data-cites="R-lawstat">(<a href="references.html#ref-R-lawstat" role="doc-biblioref">Gastwirth et al. 2023</a>)</span>
+</li>
+<li>
+<code>lmtest</code> <span class="citation" data-cites="R-lmtest">(<a href="references.html#ref-R-lmtest" role="doc-biblioref">Hothorn et al. 2022</a>)</span>
+</li>
+<li>
+<code>lomb</code> <span class="citation" data-cites="R-lomb">(<a href="references.html#ref-R-lomb" role="doc-biblioref">Ruf 2024</a>)</span>
+</li>
+<li>
+<code>mgcv</code> <span class="citation" data-cites="R-mgcv">(<a href="references.html#ref-R-mgcv" role="doc-biblioref">Wood 2025</a>)</span>
+</li>
+<li>
+<code>mgcViz</code> <span class="citation" data-cites="R-mgcViz">(<a href="references.html#ref-R-mgcViz" role="doc-biblioref">Fasiolo and Nedellec 2025</a>)</span>
+</li>
+<li>
+<code>nlme</code> <span class="citation" data-cites="R-nlme">(<a href="references.html#ref-R-nlme" role="doc-biblioref">Pinheiro et al. 2025</a>)</span>
+</li>
+<li>
+<code>oce</code> <span class="citation" data-cites="R-oce">(<a href="references.html#ref-R-oce" role="doc-biblioref">Kelley and Richards 2024</a>)</span>
+</li>
+<li>
+<code>patchwork</code> <span class="citation" data-cites="R-patchwork">(<a href="references.html#ref-R-patchwork" role="doc-biblioref">Pedersen 2025</a>)</span>
+</li>
+<li>
+<code>plotly</code> <span class="citation" data-cites="R-plotly">(<a href="references.html#ref-R-plotly" role="doc-biblioref">Sievert et al. 2025</a>)</span>
+</li>
+<li>
+<code>pracma</code> <span class="citation" data-cites="R-pracma">(<a href="references.html#ref-R-pracma" role="doc-biblioref">Borchers 2023</a>)</span>
+</li>
+<li>
+<code>randtests</code> <span class="citation" data-cites="R-randtests">(<a href="references.html#ref-R-randtests" role="doc-biblioref">Caeiro and Mateus 2024</a>)</span>
+</li>
+<li>
+<code>readr</code> <span class="citation" data-cites="R-readr">(<a href="references.html#ref-R-readr" role="doc-biblioref">Wickham et al. 2024</a>)</span>
+</li>
+<li>
+<code>rmarkdown</code> <span class="citation" data-cites="R-rmarkdown">(<a href="references.html#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2024</a>)</span>
+</li>
+<li>
+<code>signal</code> <span class="citation" data-cites="R-signal">(<a href="references.html#ref-R-signal" role="doc-biblioref">Ligges et al. 2024</a>)</span>
+</li>
+<li>
+<code>tseries</code> <span class="citation" data-cites="R-tseries">(<a href="references.html#ref-R-tseries" role="doc-biblioref">Trapletti and Hornik 2024</a>)</span>
+</li>
+<li>
+<code>TSstudio</code> <span class="citation" data-cites="R-TSstudio">(<a href="references.html#ref-R-TSstudio" role="doc-biblioref">Krispin 2023</a>)</span>
+</li>
+<li>
+<code>urca</code> <span class="citation" data-cites="R-urca">(<a href="references.html#ref-R-urca" role="doc-biblioref">Pfaff 2024</a>)</span>
+</li>
+<li>
+<code>xml2</code> <span class="citation" data-cites="R-xml2">(<a href="references.html#ref-R-xml2" role="doc-biblioref">Wickham et al. 2025b</a>)</span>
+</li>
 </ul>
-</li>
-</ul>
-<hr></section><section id="author" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="author">Author</h2>
-<p><strong>Kundan Kumar</strong> — <a href="https://kundan-kumarr.github.io/" class="uri">https://kundan-kumarr.github.io/</a></p>
-<hr></section><section id="citation" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="citation">Citation</h2>
-<p>Kumar, K. (2025). <em>AI Agents: LLMs, Agentic Workflows, and Tool Use</em>. Edition 2025-11.</p>
-<hr></section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p>This work is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-R-rmarkdown" class="csl-entry" role="listitem">
+Allaire J, Xie Y, Dervieux C, et al (2024) Rmarkdown: Dynamic documents for r. R package version 2.29, <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a>
+</div>
+<div id="ref-R-pracma" class="csl-entry" role="listitem">
+Borchers HW (2023) Pracma: Practical numerical math functions. R package version 2.4.4, <a href="https://CRAN.R-project.org/package=pracma">https://CRAN.R-project.org/package=pracma</a>
+</div>
+<div id="ref-R-dplR" class="csl-entry" role="listitem">
+Bunn A, Korpela M, Biondi F, et al (2025) dplR: Dendrochronology program library in r. R package version 1.7.8, <a href="https://github.com/OpenDendro/dplR">https://github.com/OpenDendro/dplR</a>
+</div>
+<div id="ref-R-randtests" class="csl-entry" role="listitem">
+Caeiro F, Mateus A (2024) Randtests: Testing randomness in r. R package version 1.0.2, <a href="https://CRAN.R-project.org/package=randtests">https://CRAN.R-project.org/package=randtests</a>
+</div>
+<div id="ref-R-Ecdat" class="csl-entry" role="listitem">
+Croissant Y, Graves S (2025) Ecdat: Data sets for econometrics. R package version 0.4.7, <a href="https://www.r-project.org">https://www.r-project.org</a>
+</div>
+<div id="ref-R-mgcViz" class="csl-entry" role="listitem">
+Fasiolo M, Nedellec R (2025) mgcViz: Visualisations for generalized additive models. R package version 0.2.1, <a href="https://github.com/mfasiolo/mgcViz">https://github.com/mfasiolo/mgcViz</a>
+</div>
+<div id="ref-R-lawstat" class="csl-entry" role="listitem">
+Gastwirth JL, Gel YR, Hui WLW, et al (2023) Lawstat: Tools for biostatistics, public policy, and law. R package version 3.6, <a href="https://CRAN.R-project.org/package=lawstat">https://CRAN.R-project.org/package=lawstat</a>
+</div>
+<div id="ref-R-FinTS" class="csl-entry" role="listitem">
+Graves S (2024) FinTS: Companion to tsay (2005) analysis of financial time series. R package version 0.4-9, <a href="https://geobosh.github.io/FinTSDoc/">https://geobosh.github.io/FinTSDoc/</a>
+</div>
+<div id="ref-R-lmtest" class="csl-entry" role="listitem">
+Hothorn T, Zeileis A, Farebrother RW, Cummins C (2022) Lmtest: Testing linear regression models. R package version 0.9-40, <a href="https://CRAN.R-project.org/package=lmtest">https://CRAN.R-project.org/package=lmtest</a>
+</div>
+<div id="ref-R-fma" class="csl-entry" role="listitem">
+Hyndman R (2023) Fma: Data sets from "forecasting: Methods and applications" by makridakis, wheelwright &amp; hyndman (1998). R package version 2.5, <a href="https://pkg.robjhyndman.com/fma/">https://pkg.robjhyndman.com/fma/</a>
+</div>
+<div id="ref-R-forecast" class="csl-entry" role="listitem">
+Hyndman R, Athanasopoulos G, Bergmeir C, et al (2025) Forecast: Forecasting functions for time series and linear models. R package version 8.24.0, <a href="https://pkg.robjhyndman.com/forecast/">https://pkg.robjhyndman.com/forecast/</a>
+</div>
+<div id="ref-R-ggpubr" class="csl-entry" role="listitem">
+Kassambara A (2025) Ggpubr: ggplot2 based publication ready plots. R package version 0.6.1, <a href="https://rpkgs.datanovia.com/ggpubr/">https://rpkgs.datanovia.com/ggpubr/</a>
+</div>
+<div id="ref-R-oce" class="csl-entry" role="listitem">
+Kelley D, Richards C (2024) Oce: Analysis of oceanographic data. R package version 1.8-3, <a href="https://dankelley.github.io/oce/">https://dankelley.github.io/oce/</a>
+</div>
+<div id="ref-R-TSstudio" class="csl-entry" role="listitem">
+Krispin R (2023) TSstudio: Functions for time series analysis and forecasting. R package version 0.1.7, <a href="https://github.com/RamiKrispin/TSstudio">https://github.com/RamiKrispin/TSstudio</a>
+</div>
+<div id="ref-R-signal" class="csl-entry" role="listitem">
+Ligges U, Short T, Kienzle P (2024) Signal: Signal processing. R package version 1.8-1, <a href="https://signal.R-forge.R-project.org">https://signal.R-forge.R-project.org</a>
+</div>
+<div id="ref-R-funtimes" class="csl-entry" role="listitem">
+Lyubchich V, Gel YR, Vishwakarma S (2023) Funtimes: Functions for time series analysis. R package version 9.1, <a href="https://CRAN.R-project.org/package=funtimes">https://CRAN.R-project.org/package=funtimes</a>
+</div>
+<div id="ref-R-Kendall" class="csl-entry" role="listitem">
+McLeod AI (2022) Kendall: Kendall rank correlation and mann-kendall trend test. R package version 2.2.1, <a href="http://www.stats.uwo.ca/faculty/aim">http://www.stats.uwo.ca/faculty/aim</a>
+</div>
+<div id="ref-R-fable" class="csl-entry" role="listitem">
+O’Hara-Wild M, Hyndman R, Wang E (2024) Fable: Forecasting models for tidy time series. R package version 0.4.1, <a href="https://fable.tidyverts.org">https://fable.tidyverts.org</a>
+</div>
+<div id="ref-R-feasts" class="csl-entry" role="listitem">
+O’Hara-Wild M, Hyndman R, Wang E (2025) Feasts: Feature extraction and statistics for time series. R package version 0.4.2, <a href="http://feasts.tidyverts.org/">http://feasts.tidyverts.org/</a>
+</div>
+<div id="ref-R-patchwork" class="csl-entry" role="listitem">
+Pedersen TL (2025) Patchwork: The composer of plots. R package version 1.3.2, <a href="https://patchwork.data-imaginist.com">https://patchwork.data-imaginist.com</a>
+</div>
+<div id="ref-R-urca" class="csl-entry" role="listitem">
+Pfaff B (2024) Urca: Unit root and cointegration tests for time series data. R package version 1.3-4, <a href="https://CRAN.R-project.org/package=urca">https://CRAN.R-project.org/package=urca</a>
+</div>
+<div id="ref-R-nlme" class="csl-entry" role="listitem">
+Pinheiro J, Bates D, R Core Team (2025) Nlme: Linear and nonlinear mixed effects models. R package version 3.1-168, <a href="https://svn.r-project.org/R-packages/trunk/nlme/">https://svn.r-project.org/R-packages/trunk/nlme/</a>
+</div>
+<div id="ref-R-lomb" class="csl-entry" role="listitem">
+Ruf T (2024) Lomb: Lomb-scargle periodogram. R package version 2.5.0, <a href="https://CRAN.R-project.org/package=lomb">https://CRAN.R-project.org/package=lomb</a>
+</div>
+<div id="ref-R-GGally" class="csl-entry" role="listitem">
+Schloerke B, Cook D, Larmarange J, et al (2025) GGally: Extension to ggplot2. R package version 2.4.0, <a href="https://ggobi.github.io/ggally/">https://ggobi.github.io/ggally/</a>
+</div>
+<div id="ref-R-plotly" class="csl-entry" role="listitem">
+Sievert C, Parmer C, Hocking T, et al (2025) Plotly: Create interactive web graphics via plotly.js. R package version 4.11.0, <a href="https://plotly-r.com">https://plotly-r.com</a>
+</div>
+<div id="ref-R-gamlss.util" class="csl-entry" role="listitem">
+Stasinopoulos M, Rigby B, Eilers P (2016) Gamlss.util: GAMLSS utilities. R package version 4.3-4, <a href="http://www.gamlss.org/">http://www.gamlss.org/</a>
+</div>
+<div id="ref-R-gamlss" class="csl-entry" role="listitem">
+Stasinopoulos M, Rigby R (2025) Gamlss: Generalized additive models for location scale and shape. R package version 5.5-0, <a href="https://www.gamlss.com/">https://www.gamlss.com/</a>
+</div>
+<div id="ref-R-gamlss.ggplots" class="csl-entry" role="listitem">
+Stasinopoulos M, Rigby R, De Bastiani F (2024) Gamlss.ggplots: Plotting functions for generalized additive model for location scale and shape. R package version 2.1-12, <a href="https://www.gamlss.com/">https://www.gamlss.com/</a>
+</div>
+<div id="ref-R-astsa" class="csl-entry" role="listitem">
+Stoffer D (2025) Astsa: Applied statistical time series analysis. R package version 2.3, <a href="https://dsstoffer.github.io/">https://dsstoffer.github.io/</a>
+</div>
+<div id="ref-R-tseries" class="csl-entry" role="listitem">
+Trapletti A, Hornik K (2024) Tseries: Time series analysis and computational finance. R package version 0.10-58, <a href="https://CRAN.R-project.org/package=tseries">https://CRAN.R-project.org/package=tseries</a>
+</div>
+<div id="ref-R-downlit" class="csl-entry" role="listitem">
+Wickham H (2024) Downlit: Syntax highlighting and automatic linking. R package version 0.4.4, <a href="https://downlit.r-lib.org/">https://downlit.r-lib.org/</a>
+</div>
+<div id="ref-R-ggplot2" class="csl-entry" role="listitem">
+Wickham H, Chang W, Henry L, et al (2025a) ggplot2: Create elegant data visualisations using the grammar of graphics. R package version 4.0.0, <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>
+</div>
+<div id="ref-R-dplyr" class="csl-entry" role="listitem">
+Wickham H, François R, Henry L, et al (2023) Dplyr: A grammar of data manipulation. R package version 1.1.4, <a href="https://dplyr.tidyverse.org">https://dplyr.tidyverse.org</a>
+</div>
+<div id="ref-R-readr" class="csl-entry" role="listitem">
+Wickham H, Hester J, Bryan J (2024) Readr: Read rectangular text data. R package version 2.1.5, <a href="https://readr.tidyverse.org">https://readr.tidyverse.org</a>
+</div>
+<div id="ref-R-xml2" class="csl-entry" role="listitem">
+Wickham H, Hester J, Ooms J (2025b) xml2: Parse XML. R package version 1.4.0, <a href="https://xml2.r-lib.org">https://xml2.r-lib.org</a>
+</div>
+<div id="ref-R-mgcv" class="csl-entry" role="listitem">
+Wood S (2025) Mgcv: Mixed GAM computation vehicle with automatic smoothness estimation. R package version 1.9-3, <a href="https://CRAN.R-project.org/package=mgcv">https://CRAN.R-project.org/package=mgcv</a>
+</div>
+<div id="ref-R-fGarch" class="csl-entry" role="listitem">
+Wuertz D, Chalabi Y, Setz T, et al (2024) fGarch: Rmetrics - autoregressive conditional heteroskedastic modelling. R package version 4033.92, <a href="https://geobosh.github.io/fGarchDoc/">https://geobosh.github.io/fGarchDoc/</a>
+</div>
+<div id="ref-R-knitr" class="csl-entry" role="listitem">
+Xie Y (2025) Knitr: A general-purpose package for dynamic report generation in r. R package version 1.50, <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+</div>
+<div id="ref-R-dynlm" class="csl-entry" role="listitem">
+Zeileis A (2019) Dynlm: Dynamic linear regression. R package version 0.3-6, <a href="https://CRAN.R-project.org/package=dynlm">https://CRAN.R-project.org/package=dynlm</a>
+</div>
+</div>
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -870,15 +1072,15 @@ The notes emphasize <strong>AI design patterns</strong>, <strong>LLM reasoning s
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./appendix-practice-exercises.html" class="pagination-link" aria-label="Memory and Knowledge Base Schemas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Memory and Knowledge Base Schemas</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-foundations-agentic-ai.html" class="pagination-link" aria-label="Foundations of Agentic AI">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations of Agentic AI</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/appendix-prompt-engineering-patterns.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

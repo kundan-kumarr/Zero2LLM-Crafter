@@ -4,9 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Kundan Kumar">
-<meta name="dcterms.date" content="2025-11-19">
-<title>AI Agents</title>
+<title>12&nbsp; AI Operating Systems – AI Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,7 +17,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -28,7 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-foundations-agentic-ai.html" rel="next">
+<link href="./13-safety-ethics-and-alignment.html" rel="next">
+<link href="./11-evaluation-and-benchmarking.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -65,7 +83,32 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 </head>
 <body class="nav-sidebar floating quarto-light">
 
@@ -74,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-evaluation-and-benchmarking.html">Part IV — Evaluation, Safety, and Optimization</a></li><li class="breadcrumb-item"><a href="./12-observability-and-debugging.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">AI Operating Systems</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -253,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./12-observability-and-debugging.html" class="sidebar-item-text sidebar-link">
+  <a href="./12-observability-and-debugging.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">AI Operating Systems</span></span></a>
   </div>
 </li>
@@ -349,128 +392,155 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  <li><a href="#author" id="toc-author" class="nav-link" data-scroll-target="#author">Author</a></li>
-  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<li>
+<a href="#time-series-forecasts" id="toc-time-series-forecasts" class="nav-link active" data-scroll-target="#time-series-forecasts"><span class="header-section-number">12.1</span> Time series forecasts</a>
+  <ul class="collapse">
+<li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions"><span class="header-section-number">12.1.1</span> Assumptions</a></li>
+  <li><a href="#how-to-obtain-forecasts-from-different-types-of-models-white-noise-like-recursive-like-arima-and-exponential-smoothing-with-x-variables-and-arma-structure-examples-in-r" id="toc-how-to-obtain-forecasts-from-different-types-of-models-white-noise-like-recursive-like-arima-and-exponential-smoothing-with-x-variables-and-arma-structure-examples-in-r" class="nav-link" data-scroll-target="#how-to-obtain-forecasts-from-different-types-of-models-white-noise-like-recursive-like-arima-and-exponential-smoothing-with-x-variables-and-arma-structure-examples-in-r"><span class="header-section-number">12.1.2</span> How to obtain forecasts from different types of models (white noise-like; recursive like ARIMA and Exponential smoothing; with x-variables and ARMA structure; Examples in R)</a></li>
+  <li><a href="#types-of-forecasts-especially-when-multiple-regression" id="toc-types-of-forecasts-especially-when-multiple-regression" class="nav-link" data-scroll-target="#types-of-forecasts-especially-when-multiple-regression"><span class="header-section-number">12.1.3</span> Types of forecasts, especially when multiple regression</a></li>
+  </ul>
+</li>
+  <li><a href="#cross-validation-schemes" id="toc-cross-validation-schemes" class="nav-link" data-scroll-target="#cross-validation-schemes"><span class="header-section-number">12.2</span> Cross-validation schemes</a></li>
+  <li><a href="#metrics-for-model-comparison" id="toc-metrics-for-model-comparison" class="nav-link" data-scroll-target="#metrics-for-model-comparison"><span class="header-section-number">12.3</span> Metrics for model comparison</a></li>
+  <li><a href="#worked-out-example-of-comparing-several-models" id="toc-worked-out-example-of-comparing-several-models" class="nav-link" data-scroll-target="#worked-out-example-of-comparing-several-models"><span class="header-section-number">12.4</span> Worked out example of comparing several models</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">12.5</span> Conclusion</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/12-observability-and-debugging.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">AI Agents</h1>
-<p class="subtitle lead">LLMs, Agentic Workflows, and Tool Use</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-evaluation-and-benchmarking.html">Part IV — Evaluation, Safety, and Optimization</a></li><li class="breadcrumb-item"><a href="./12-observability-and-debugging.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">AI Operating Systems</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-evalforecast" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">AI Operating Systems</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kundan Kumar </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2025-11-19</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header>
-<section id="preface" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="preface">Preface</h2><p><img src="TSAcov.png" title="AI Agents" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>This collection of lecture notes and practical guides focuses on <strong>AI agents</strong>, with an emphasis on Large Language Models (LLMs), LLM reasoning, agentic workflows, and tool integration, including the development of <strong>reasoning-centric LLMs from scratch</strong>.<br>
-The materials consolidate insights from both research and practice, covering the design, orchestration, and evaluation of LLM-powered agents across diverse domains.</p>
-<p>Each section begins with learning objectives, core concepts, and references, followed by illustrative examples and hands-on frameworks.<br>
-The notes emphasize <strong>AI design patterns</strong>, <strong>LLM reasoning strategies</strong>, <strong>Retrieval-Augmented Generation (RAG)</strong>, and <strong>multi-agent systems</strong>, offering both conceptual depth and implementation guidance. They are not intended to replace formal textbooks, but to complement them through practical, framework-driven insights for building <strong>scalable, trustworthy, and adaptive LLM agents</strong>.</p>
-<p>The intended audience is expected to have a foundational understanding of programming and familiarity with the following LLM-related concepts and frameworks:</p>
+</header><p>This lecture …</p>
+<p><strong>Objectives</strong></p>
+<ol type="1">
+<li>Recognize the typical assumptions implied when making forecasts.</li>
+<li>Distinguish <em>ex-post</em> from <em>ex-ante</em> forecasts.</li>
+<li>Discuss peculiarities of assessing (cross-validating) regression models built for time series.</li>
+<li>Define metrics used to assess quality of point forecasts and interval forecasts.</li>
+<li>Design and implement cross-validation for time series models.</li>
+</ol>
+<p><strong>Reading materials</strong></p>
 <ul>
-<li>
-<strong>AI / LLM design patterns</strong>, including:
-<ul>
-<li>LLM reasoning and Chain-of-Thought (CoT) prompting<br>
+<li>Chapter 9 in <span class="citation" data-cites="Brockwell:Davis:2002">Brockwell and Davis (<a href="references.html#ref-Brockwell:Davis:2002" role="doc-biblioref">2002</a>)</span>
 </li>
-<li>Tree-of-Thought (ToT), Graph-of-Thought (GoT), and reflection-based reasoning<br>
-</li>
-<li>Retrieval-Augmented Generation (RAG)<br>
-</li>
-<li>Agent orchestration workflows and planner–executor design<br>
-</li>
-<li>Memory and context management (short-term, episodic, and long-term)<br>
-</li>
-<li>Self-reflective, hierarchical, and multi-agent collaboration patterns</li>
-</ul>
-</li>
-<li>
-<strong>Frameworks and libraries</strong>:
-<ul>
-<li>LangChain – composable pipelines for tool-augmented reasoning<br>
-</li>
-<li>LangGraph – graph-based agent orchestration and reasoning flow control<br>
-</li>
-<li>CrewAI – collaborative and role-based multi-agent coordination<br>
-</li>
-<li>MCP (Model Context Protocol) – cross-model interoperability and context exchange</li>
-</ul>
-</li>
-<li>
-<strong>Evaluation and benchmarking</strong>
-<ul>
-<li>Methods, metrics, and standardized benchmarks for LLMs and AI agents<br>
-</li>
-<li>Benchmarks: AgentBench, ToolBench, ChatEval, SWE-Bench<br>
-</li>
-<li>Evaluation dimensions: reasoning correctness, factuality, coherence, tool-use accuracy, and ethical alignment</li>
-</ul>
-</li>
-<li>
-<strong>Multimodal and tool-integrated AI</strong>
-<ul>
-<li>Integrating vision, text, and speech into agentic workflows<br>
-</li>
-<li>Connecting APIs, databases, and external environments for tool use<br>
-</li>
-<li>Designing interactive and embodied agents for perception and control</li>
-</ul>
-</li>
-<li>
-<strong>Safety, ethics, and alignment</strong>
-<ul>
-<li>Robustness, trustworthiness, and ethical safeguards for agentic systems<br>
-</li>
-<li>Defenses against adversarial inputs, data poisoning, and prompt injection<br>
-</li>
-<li>Responsible deployment and human-in-the-loop design</li>
-</ul>
-</li>
-<li>
-<strong>Emerging frontiers</strong>
-<ul>
-<li>LLM + DRL: reinforcement learning agents with reasoning and planning<br>
-</li>
-<li>LLM + GNNs: structured and relational reasoning for decision systems<br>
-</li>
-<li>LLM compilers and world models: translating reasoning into executable plans<br>
-</li>
-<li>AI operating systems: multi-agent ecosystems and autonomous orchestration</li>
-</ul>
+<li>Chapter 7 in <span class="citation" data-cites="Hastie:etal:2009">Hastie et al. (<a href="references.html#ref-Hastie:etal:2009" role="doc-biblioref">2009</a>)</span>
 </li>
 </ul>
-<hr></section><section id="author" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="author">Author</h2>
-<p><strong>Kundan Kumar</strong> — <a href="https://kundan-kumarr.github.io/" class="uri">https://kundan-kumarr.github.io/</a></p>
-<hr></section><section id="citation" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="citation">Citation</h2>
-<p>Kumar, K. (2025). <em>AI Agents: LLMs, Agentic Workflows, and Tool Use</em>. Edition 2025-11.</p>
-<hr></section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p>This work is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<section id="time-series-forecasts" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="time-series-forecasts">
+<span class="header-section-number">12.1</span> Time series forecasts</h2>
+<section id="assumptions" class="level3" data-number="12.1.1"><h3 data-number="12.1.1" class="anchored" data-anchor-id="assumptions">
+<span class="header-section-number">12.1.1</span> Assumptions</h3>
+</section><section id="how-to-obtain-forecasts-from-different-types-of-models-white-noise-like-recursive-like-arima-and-exponential-smoothing-with-x-variables-and-arma-structure-examples-in-r" class="level3" data-number="12.1.2"><h3 data-number="12.1.2" class="anchored" data-anchor-id="how-to-obtain-forecasts-from-different-types-of-models-white-noise-like-recursive-like-arima-and-exponential-smoothing-with-x-variables-and-arma-structure-examples-in-r">
+<span class="header-section-number">12.1.2</span> How to obtain forecasts from different types of models (white noise-like; recursive like ARIMA and Exponential smoothing; with x-variables and ARMA structure; Examples in R)</h3>
+<p>Univariate models - extrapolation of trends; ARIMA are 1-step-ahead forecasts (AIC)</p>
+<p>Types of forecasts (point prediction or intervals; can be different intervals for the same point prediction)</p>
+</section><section id="types-of-forecasts-especially-when-multiple-regression" class="level3" data-number="12.1.3"><h3 data-number="12.1.3" class="anchored" data-anchor-id="types-of-forecasts-especially-when-multiple-regression">
+<span class="header-section-number">12.1.3</span> Types of forecasts, especially when multiple regression</h3>
+<p>Types (<em>ex-post</em> from <em>ex-ante</em> forecasts)</p>
+<p>Let <span class="math inline">\(\hat{Y}_T(h)\)</span> be a forecast <span class="math inline">\(h\)</span> steps ahead made at the time <span class="math inline">\(T\)</span>. If <span class="math inline">\(\hat{Y}_T(h)\)</span> only uses information up to time <span class="math inline">\(T\)</span>, the resulting forecasts are called out-of-sample forecasts. Economists call them <em>ex-ante</em> forecasts. We have discussed several ways to select the optimal method or model for forecasting, e.g., using PMAE, PMSE, or coverage – all calculated on a testing set. <span class="citation" data-cites="Chatfield:2000">Chatfield (<a href="references.html#ref-Chatfield:2000" role="doc-biblioref">2000</a>)</span> lists several ways to unfairly ‘improve’ forecasts:</p>
+<ol type="1">
+<li>Fitting the model to all the data including the test set.</li>
+<li>Fitting several models to the training set and choosing the model which gives the best ‘forecasts’ of the test set. The selected model is then used (again) to produce forecasts of the test set, even though the latter has already been used in the modeling process.</li>
+<li>Using the known test-set values of ‘future’ observations on the explanatory variables in multivariate forecasting. This will improve forecasts of the dependent variable in the test set, but these future values will not of course be known at the time the forecast is supposedly made (though in practice the ‘forecast’ is made at a later date). Economists call such forecasts <em>ex-post</em> forecasts to distinguish them from <em>ex-ante</em> forecasts. The latter, being genuinely out-of-sample, use forecasts of future values of explanatory variables, where necessary, to compute forecasts of the response variable. <em>Ex-post</em> forecasts can be useful for assessing the effects of explanatory variables, provided the analyst does not pretend that they are genuine out-of-sample forecasts.</li>
+</ol>
+<p>So what to do if we put lots of effort to build a regression model using time series and need to forecast the response, <span class="math inline">\(Y_t\)</span>, which is modeled using different independent variables <span class="math inline">\(X_{t,k}\)</span> (<span class="math inline">\(k=1,\dots,K\)</span>)? Two options are possible.</p>
+<p><strong>Leading indicators</strong></p>
+<p>If <span class="math inline">\(X_{t,k}\)</span>’s are leading indicators with lags starting at <span class="math inline">\(l\)</span>, we, generally, would not need their future values to obtain the forecasts <span class="math inline">\(\hat{Y}_T(h)\)</span>, where <span class="math inline">\(h\leqslant l\)</span>. For example, the model for losses tested in <a href="09-multimodal-agents.html#sec-Granger" class="quarto-xref"><span>Section 9.7</span></a> shows that precipitation with lag 1 is a good predictor for current losses, i.e., precipitation is a leading indicator. The 1-week ahead forecast of <span class="math inline">\(Y_{t+1}\)</span> can be obtained using the current precipitation <span class="math inline">\(X_t\)</span> (all data are available). If <span class="math inline">\(h&gt;l\)</span>, we will be forced to forecast the independent variables, <span class="math inline">\(X_{t,k}\)</span>’s – see the next option.</p>
+<p><strong>Forecast of predictors</strong></p>
+<p>If we opt for forecasting <span class="math inline">\(X_{t,k}\)</span>’s, the errors (uncertainty) of such forecasts will be larger, because future <span class="math inline">\(X_{t,k}\)</span>’s themselves will be the estimates. Nevertheless, it might be the only choice when leading indicators are not available. Building a full and comprehensive model with all diagnostics for each regressor is usually unfeasible and even problematic if we plan to consider multivariate models for regressors (the complexity of models will quickly escalate). As an alternative, it is common to use automatic or semi-automatic univariate procedures that can help to forecast each of the <span class="math inline">\(X_{t,k}\)</span>’s. For example, consider exponential smoothing, Holt–Winters smoothing, and auto-selected SARIMA/ARIMA/ARMA/AR/MA models – all those can be automated for a large number of forecasts to make.</p>
+</section></section><section id="cross-validation-schemes" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="cross-validation-schemes">
+<span class="header-section-number">12.2</span> Cross-validation schemes</h2>
+<p>Goals and intended implementation of the model hence the selection of the scheme.</p>
+<p>Training - Testing (split %% and n)</p>
+<p>Training - Testing - Evaluation</p>
+<p>Window approach caret:: forecast::</p>
+</section><section id="metrics-for-model-comparison" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="metrics-for-model-comparison">
+<span class="header-section-number">12.3</span> Metrics for model comparison</h2>
+<p>How do we compare forecasting models to decide which one is better? We will look at various ways of choosing between models as the course progresses, but the most obvious answer is to see which one is better at predicting.</p>
+<p>Suppose we have used the data <span class="math inline">\(Y_1, \dots, Y_n\)</span> to build <span class="math inline">\(M\)</span> forecasting models <span class="math inline">\(\hat{Y}^{(m)}_t\)</span> (<span class="math inline">\(m = 1,\dots,M\)</span>) and we now obtain future observations <span class="math inline">\(Y_{n+1}, \dots, Y_{n+k}\)</span> that were not used to fit the models (also called <em>out-of-sample</em> data, after-sample, or the testing set; <span class="math inline">\(k\)</span> is the size of this set). The difference <span class="math inline">\(Y_t - \hat{Y}^{(m)}_t\)</span> is the forecast (or prediction) error at the time <span class="math inline">\(t\)</span> for the <span class="math inline">\(m\)</span>th model. For each model, compute the prediction mean square error (PMSE) <span id="eq-pmse"><span class="math display">\[
+PMSE_m = k^{-1}\sum_{t=n+1}^{n+k}\left(Y_t - \hat{Y}^{(m)}_t\right)^2
+\tag{12.1}\]</span></span> and prediction mean absolute error (PMAE) <span id="eq-pmae"><span class="math display">\[
+PMAE_m = k^{-1}\sum_{t=n+1}^{n+k}\left|Y_t - \hat{Y}^{(m)}_t\right|
+\tag{12.2}\]</span></span> and, similarly, prediction root mean square error (PRMSE; <span class="math inline">\(PRMSE = \sqrt{PMSE}\)</span>), prediction mean absolute percentage error (PMAPE, if <span class="math inline">\(Y_t \neq 0\)</span> in the testing period), etc. We choose the model with the smallest error.</p>
+<p>One obvious drawback to the above method is that it requires us to wait for future observations to compare models. A way around this is to take the historical dataset <span class="math inline">\(Y_1, \dots, Y_n\)</span> and split it into a <em>training set</em> <span class="math inline">\(Y_1, \dots, Y_k\)</span> and a <em>testing set</em> <span class="math inline">\(Y_{k+1}, \dots, Y_n\)</span>, where <span class="math inline">\((n - k)\ll k\)</span>, i.e., most of the data goes into the training set.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This scheme of splitting time series into the testing and training sets is a simple form of <em>cross-validation</em>. Not all forms of cross-validation apply to time series due to the usual temporal dependence in time series data. We need to select cross-validation techniques that can accommodate such dependence. Usually, it implies selecting data for validation not at random but in consecutive chunks (periods) and, ideally, with testing or validation periods being after the training period.</p>
+</div>
+</div>
+<p>Forecasting models are then built using only the training set and used to ‘forecast’ values from the testing set. Sometimes it is called an <em>out-of-sample forecast</em> because we predict values for the times we have not used for the model specification and estimation. The testing set is used as a set of future observations to compute the PMSE. The PMSE and other errors are computed for each model over the testing set and then compared to see errors for which models are smaller.</p>
+<p>If two models produce approximately the same errors, we choose the model that is simpler (involves fewer variables). This is called the <em>law of parsimony</em>.</p>
+<p>The above error measures (PMSE, PRMSE, PMAE, etc.) compare observed and forecasted data points, hence, are measures of the accuracy of the <em>point forecasts</em>. Another way of comparing models could be based on the quality of their <em>interval forecasts</em>, i.e., by assessing how good the prediction intervals are. To assess the quality of interval forecasts, one may start by computing the <em>empirical coverage</em> (proportion of observations in the testing set that are within – covered by – corresponding prediction intervals for given confidence <span class="math inline">\(C\)</span>, e.g., 95%) and <em>average interval width</em>. Prediction intervals are well-calibrated if empirical coverage is close to <span class="math inline">\(C\)</span> (more important) while intervals are not too wide (less important).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To select the best coverage, one can calculate the absolute differences between the nominal coverage <span class="math inline">\(C\)</span> and each empirical coverage <span class="math inline">\(\hat{C}_m\)</span>: <span class="math display">\[
+\Delta_m = |C - \hat{C}_m|.
+\]</span> Hence, we select the model with the smallest <span class="math inline">\(\Delta_m\)</span>, not the largest coverage <span class="math inline">\(\hat{C}_m\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is possible to obtain different prediction intervals from the same model. For example, we can calculate prediction intervals based on normal and bootstrapped distributions. In this case, point forecasts are the same, but interval forecasts differ.</p>
+</div>
+</div>
+<p>We may compare a great number of models using the training set, and choose the best one (with the smallest errors), however, it would be unfair to use the out-of-sample errors from the testing set for demonstrating the model performance because this part of the sample was used to select the model. Thus, it is advisable to have one more chunk of the same time series that was not used for model specification, estimation, or selection. Errors of the selected model on this <em>validation set</em> will be closer to the true (genuine) out-of-sample errors and can be used to improve coverage of true out-of-sample forecasts when the model is finally deployed.</p>
+</section><section id="worked-out-example-of-comparing-several-models" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="worked-out-example-of-comparing-several-models">
+<span class="header-section-number">12.4</span> Worked out example of comparing several models</h2>
+<ol type="1">
+<li><p>Basic (naive) models: average / climatology / HWinters</p></li>
+<li><p>Commonly or previously used model (GLM)</p></li>
+<li><p>State-of-the-science or proposed model</p></li>
+</ol></section><section id="conclusion" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="conclusion">
+<span class="header-section-number">12.5</span> Conclusion</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Brockwell:Davis:2002" class="csl-entry" role="listitem">
+Brockwell PJ, Davis RA (2002) Introduction to time series and forecasting, 2nd edn. Springer, New York, NY, USA
+</div>
+<div id="ref-Chatfield:2000" class="csl-entry" role="listitem">
+Chatfield C (2000) Time-series forecasting. CRC Press, Boca Raton, FL, USA
+</div>
+<div id="ref-Hastie:etal:2009" class="csl-entry" role="listitem">
+Hastie TJ, Tibshirani RJ, Friedman JH (2009) <a href="https://doi.org/10.1007/978-0-387-84858-7">The elements of statistical learning: Data mining, inference, and prediction</a>, 2nd edn. Springer, New York, NY, USA
+</div>
+</div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -870,10 +940,13 @@ The notes emphasize <strong>AI design patterns</strong>, <strong>LLM reasoning s
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./11-evaluation-and-benchmarking.html" class="pagination-link" aria-label="Emerging Frontiers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Emerging Frontiers</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-foundations-agentic-ai.html" class="pagination-link" aria-label="Foundations of Agentic AI">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations of Agentic AI</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./13-safety-ethics-and-alignment.html" class="pagination-link" aria-label="Spectral Analysis">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectral Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -881,4 +954,4 @@ The notes emphasize <strong>AI design patterns</strong>, <strong>LLM reasoning s
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/edit/master/12-observability-and-debugging.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kundan-kumarr/Zero2LLM-Crafter/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
